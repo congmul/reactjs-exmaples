@@ -10,7 +10,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* React Router can be used anywhere after wrapping App with BrowserRouter  */}
+    <BrowserRouter>  
       <App />
     </BrowserRouter>
   </React.StrictMode>
