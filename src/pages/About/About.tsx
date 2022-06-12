@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
-
-export default function About() {
+const About = ():JSX.Element => {
     return(
         <div>
             <h1>About Me</h1>
-            <Link to='/'>Home</Link>
         </div>
         )
 }
+
+export default About
