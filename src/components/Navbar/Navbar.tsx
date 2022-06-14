@@ -4,7 +4,7 @@ const Navbar = ():JSX.Element => {
     return(
     <>
         <Link to='/intro'>Intro</Link>
-        <Link to='/about'>About</Link>
+        <Link to='/home'>Home</Link>
     </>)
 }
 
