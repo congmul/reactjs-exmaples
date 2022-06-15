@@ -10,6 +10,7 @@ const App = ():JSX.Element => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/intro" element={<Intro />} />
+        <Route path="/about" element={<About />} />
         <Route path="/home" element={<Home />} />
       </Route>
     </Routes>
