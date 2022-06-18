@@ -1,6 +1,6 @@
 # React with Typescript & Sass examples.
 
-## Routing
+## Routing using react-router-dom v6
  - react-router-dom v6
  ```js
     // in index.tsx
