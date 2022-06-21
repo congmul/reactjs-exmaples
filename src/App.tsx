@@ -8,7 +8,7 @@ import Home from './pages/Home/Home';
 const App = ():JSX.Element => {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Layout />}> {/* Wrapping whole pages in the layout */}
         <Route path="/intro" element={<Intro />} />
         <Route path="/about" element={<About />} />
         <Route path="/home" element={<Home />} />
