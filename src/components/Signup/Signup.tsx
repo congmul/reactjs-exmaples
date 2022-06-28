@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import validator from 'validator';
 
 const Signup = ():JSX.Element => {
+    useEffect(() => {
+        const test = localStorage.getItem("test");
+        console.log(test);
+
+    }, [])
     const [ signupInput, setSignupInput] = useState({
         email: "",
         password: "",
@@ -17,6 +22,8 @@ const Signup = ():JSX.Element => {
     }
     const onclickSubmit = (e: any) => {
         e.preventDefault();
+
+        localStorage.getItem("test");
         if(!validator.isEmail(signupInput.email)){
             return setError("the email you input in invaild");
         }else if(signupInput.password.length < 5){

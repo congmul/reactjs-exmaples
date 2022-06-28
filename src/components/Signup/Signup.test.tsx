@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-render-in-setup */
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Signup from "./Signup";
 
@@ -108,6 +108,19 @@ describe("Signup", () => {
             expect(displayingErrorElPassword).not.toBeInTheDocument();
             expect(displayingErrorElConfirmPassword).not.toBeInTheDocument();
 
+        })
+        test("To store email into localStorage", async ()=>{
+            Object.defineProperty(window, "localStorage", {
+                value: {
+                  getItem: jest.fn(() => null),
+                  setItem: jest.fn(() => null)
+                },
+                writable: true
+              });
+              clickOnsubmit();
+            await waitFor(() => {
+                expect(window.localStorage.getItem).toHaveBeenCalledTimes(1);
+            }) 
         })
     }))
 })
