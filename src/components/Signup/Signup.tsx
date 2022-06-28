@@ -24,6 +24,7 @@ const Signup = ():JSX.Element => {
         e.preventDefault();
 
         localStorage.getItem("test");
+        localStorage.setItem("email", signupInput.email);
         if(!validator.isEmail(signupInput.email)){
             return setError("the email you input in invaild");
         }else if(signupInput.password.length < 5){

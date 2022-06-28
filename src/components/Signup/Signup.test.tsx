@@ -117,9 +117,14 @@ describe("Signup", () => {
                 },
                 writable: true
               });
+              typeInputForm({email: "jehyunjung@gmail.com"})
               clickOnsubmit();
             await waitFor(() => {
-                expect(window.localStorage.getItem).toHaveBeenCalledTimes(1);
+                // expect(window.localStorage.getItem).toHaveBeenCalledTimes(1)
+                expect(window.localStorage.setItem).toHaveBeenCalledWith(
+                    "email",
+                    "jehyunjung@gmail.com"
+                  );
             }) 
         })
     }))
