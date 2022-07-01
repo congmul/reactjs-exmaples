@@ -20,5 +20,16 @@
  ```
 
  ## React Test Library
- 1. Select
-   - getBy... -> queryBy... -> testId
+  1. Select
+    - getBy... -> queryBy... -> testId
+  2. Mock localStorage
+  ```js 
+  Object.defineProperty(window, "localStorage", {
+      value: {
+        getItem: jest.fn(() => null),
+        setItem: jest.fn(() => null),
+        removeItem: jest.fn(() => null)
+      },
+      writable: true
+    });
+  ``` 
