@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import "./layout.scss";
 
 import Navbar from "../Navbar/Navbar";
 
@@ -6,7 +7,7 @@ const Layout = ():JSX.Element => {
     return(
     <>
         <Navbar />
-        <div><Outlet /></div>
+        <div className="layout-bottom"><Outlet /></div>
     </>
     )
 }

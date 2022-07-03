@@ -1,8 +1,8 @@
+import FlowChart from '../../components/FlowChart/FlowChart';
+
 const Intro = ():JSX.Element => {
     return(
-        <div>
-            Intro Page
-        </div>
+            <FlowChart />
         )
 }
 
