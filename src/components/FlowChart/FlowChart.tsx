@@ -33,7 +33,7 @@ const FlowChart = ():JSX.Element => {
     const [edges, setEdges] = useState(initialEdges);
     return(
     <>
-        <ReactFlow nodes={nodes} edges={edges} fitView />
+        <ReactFlow nodes={nodes} edges={edges} draggable={true} fitView />
     </>
     )
 }
